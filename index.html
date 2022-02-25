@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cơ thể</title>
+</head>
+<body>
+    <h1 id="cal">BMI Calculator</h1>
+    <p>Chiều cao (m)</p>
+    <input type="text" id="height">
+    <p>Cân nặng (kg)</p>
+    <input type="text" id="weight">
+    <button onclick="tinh()">Tính BMI</button>
+<script>
+    function tinh() {
+        let a = +document.getElementById('height').value;
+        let b = +document.getElementById('weight').value;
+        let bmi = (b/(a*a));
+        if (bmi < 18)
+            alert('Underweight');
+        else if (bmi < 25.0)
+            alert('Normal');
+        else if (bmi < 30.0)
+            alert('Overweight');
+        else
+            alert('Obese');
+        document.getElementById('cal').innerHTML = 'Kết quả BMI là ' + (b/(a*a));
+
+    }
+
+</script>
+</body>
+</html>
